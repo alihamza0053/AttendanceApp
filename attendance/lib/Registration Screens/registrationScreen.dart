@@ -1,4 +1,5 @@
 import 'package:attendance/Registration%20Screens/loginScreen.dart';
+import 'package:attendance/User%20Panel/userPanelScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -140,7 +141,9 @@ class _RegisterationScreenState extends State<RegisterationScreen> {
                         child: SizedBox(
                             width: double.infinity,
                             child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>UserPanel()));
+                                },
                                 child: const Text(
                                   "Register",
                                   style: TextStyle(
